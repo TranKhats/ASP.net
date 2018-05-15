@@ -1,8 +1,8 @@
 body{
-    /* background: url(../images/bg_img.jpg) top center no-repeat #000; */
+    background: url(../images/bg_img.jpg) top center no-repeat #000;
 }
 .container{
-    background: #a5a2a2;
+    background: white;
 }
 ul li{
     display: inline-block;
@@ -18,9 +18,14 @@ header .wrap-box{
     overflow: hidden;
 }
 #top-header .pull-left{
+    /* font-size: 20px;
+    padding: 29px 0 29px 29px;
+    font-weight: bold; */
+    overflow: hidden;
     font-size: 20px;
     padding: 29px 0 29px 29px;
     font-weight: bold;
+    min-width: 380px;
 }
 #slogan{
     margin-top: 60px;
@@ -142,9 +147,12 @@ header .nav-btn{
 /* -------------------------CONTENT--------------------------- */
 #home .wrap-box{
     background: url(../images/bg_top_img.jpg);
+    overflow: hidden;
+    padding: 53px;
 }
 #content .left-content{
-    width: 23.9%;
+    /* width: 27.9%; */
+    width: 280px;
 }
 .left-content .passager{
     width: 35px;
@@ -187,7 +195,6 @@ header .nav-btn{
 /* Style the tab content */
 .tabcontent {
     display: none;
-    /* padding: 6px 12px; */
     border: 1px solid #ccc;
     border-top: none;
     border-radius: 0 0 6px 6px;
@@ -195,14 +202,12 @@ header .nav-btn{
 }
 
 #tab-A{
-    /* border-radius: 0 0 6px 6px;
-    background: white; */
+
     display: block;
     padding: 0;
 }
 .last-content{
     margin: 0!important;
-    border: none;
 }
 /* ------------------------------ */
 .form-action{
@@ -240,4 +245,154 @@ header .nav-btn{
 }
 .form-action table tr td{
     font-size: 13px;
+}
+/* ----------------------------MAIN-CONTAIN-------------------------- */
+.main-content,.main-content .container,.main-content .wrap-box,.main-content article,aside{
+    overflow: hidden;
+}
+.box{
+    border: solid 1px #0000004f;
+    border-radius: 5px;
+    /* padding: 15px; */
+}
+.sub-box{
+    padding: 15px;
+}
+.box .title{
+    background: #f3f3e3;
+    padding: 15px;
+}
+.main-content .wrap-box{
+    width: 95%;
+    margin: auto;
+    padding: 15px 0 15px 0;
+}
+.sub-box ul li{
+    display: block;
+    font-size: small;
+}
+.sub-box  .depature{
+    float: right;
+}
+/* ----------------------------Center-Contain------------- */
+.sub-boxer > div{
+    float: left;
+}
+.sub-info-boxer,.sub-info-boxer .sub-box{
+    width: 100%;
+   
+}
+.sub-info-boxer .sub-box{
+    margin: auto;
+}
+.img-boxer img{
+    /* padding-left: 50px; */
+}
+.imfo-boxer .img-boxer{
+    width: 90%;
+    margin: auto;
+}
+.detailed-info-boxer p{
+    text-align: justify;
+}
+.imfo-boxer{
+    overflow: hidden;
+    width: 365px;
+    min-width: 280px;
+    float: left;
+    font-size: 14px;
+}
+.detailed-info-box{
+    width: 255px;
+}
+.read-more{
+    display: block;
+    border-radius: 5px;
+    background: url(../images/tabs.gif) repeat-x;
+    color: white;
+    padding: 6px;
+    font-size: 14px;
+    margin-left: 225px;
+    width: 110px;
+    padding-left: 20px;
+}
+.read-more span{
+    background: url(../images/marker_2.gif) right no-repeat;
+    padding-right: 13px;
+    padding-bottom: 5px;
+}
+
+/* ------------------------FOOTER---------------------------- */
+footer .wrap-box{
+    background: url(../images/bg_footer.gif) repeat-x;
+    padding: 25px;
+    overflow: hidden;
+}
+footer .wrap-box > div{
+    float: left;
+    padding-top:15px;
+}
+footer .about-site ul li{
+    display: block;
+    width: 100%;
+}
+
+/* -----------------------------REPONSIVE-DEVICES------------------------------- */
+/* @media only screen and (max-width: 1024px){
+    .container{
+        background: red!important;
+    }
+} */
+@media only screen and (max-width: 1024px) {
+    .container{
+        /* background: red!important; */
+    }
+    #home .wrap-box {
+        padding: 25px;
+    }
+    .main-content .pull-right{
+        width: 67%!important;
+    }
+    .imfo-boxer{
+        width: 293px;
+    }
+    .read-more{
+        margin-left: 160px;
+    }
+}
+
+@media only screen and (max-width: 768px){
+    .main-content .pull-right {
+        width: 58%!important;
+    }
+    .menu-list li {
+        font-size: 13px;
+        height: 30px!important;
+        width: 100%!important;
+    }
+    .menu-list *{
+        background: none;
+        padding: 0;
+        margin: 0;
+    }
+    .main-content aside{
+        width: 90%;
+        margin: auto;
+    }
+}
+
+@media only screen and (max-width: 768px){
+    .main-content .container > .wrap-box .pull-left{
+        width: 100%;
+    }
+    .main-content .pull-right {
+        width: 100%!important;
+    }
+    .imfo-boxer {
+        width: 100%;
+    }
+    .main-content .container > .wrap-box .pull-right{
+        width: 100%!important;
+        margin: 0!important;
+    }
 }

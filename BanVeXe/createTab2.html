@@ -7,7 +7,7 @@
 
 
     <link rel="stylesheet" href="css/fadeSlider.css" type="text/css" media="all">
-    <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="js/jquery-1.5.2.js"></script>
 
 
     <script type="text/javascript" src="js/jquery.nivo.slider.pack.js"></script>
@@ -34,12 +34,20 @@
 
     <!--footer end-->
     <script type="text/javascript">
-        $(window).on('load',function () {
+        $(document).ready(function () {
+            tabs.init();
+        });
+        jQuery(document).ready(function ($) {
+            $('#form_1, #form_2, #form_3').jqTransform({
+                imgPath: 'jqtransformplugin/img/'
+            });
+        });
+        $(window).load(function () {
             $('#slider').nivoSlider({
                 effect: 'fade', //Specify sets like: 'fold,fade,sliceDown, sliceDownLeft, sliceUp, sliceUpLeft, sliceUpDown, sliceUpDownLeft' 
                 slices: 15,
                 animSpeed: 500,
-                pauseTime: 4000,
+                pauseTime: 6000,
                 startSlide: 0, //Set starting Slide (0 index)
                 directionNav: false, //Next & Prev
                 directionNavHide: false, //Only show on hover
